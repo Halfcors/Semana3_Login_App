@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Semana2_AppCalificaciones.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label Text="Sistema de Calificaciones" FontSize="22" />
+
+            <Picker x:Name="pickerEstudiante" Title="Seleccione Estudiante">
+                <Picker.Items>
+                    <x:String>Juan</x:String>
+                    <x:String>Maria</x:String>
+                    <x:String>Pedro</x:String>
+                    <x:String>Ana</x:String>
+                    <x:String>Luis</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="PARCIAL 1"/>
+            <Entry x:Name="seguimiento1" Placeholder="Seguimiento 1 (0-10)" Keyboard="Numeric"/>
+            <Entry x:Name="examen1" Placeholder="Examen 1 (0-10)" Keyboard="Numeric"/>
+
+            <Label Text="PARCIAL 2"/>
+            <Entry x:Name="seguimiento2" Placeholder="Seguimiento 2 (0-10)" Keyboard="Numeric"/>
+            <Entry x:Name="examen2" Placeholder="Examen 2 (0-10)" Keyboard="Numeric"/>
+
+            <DatePicker x:Name="fechaPicker"/>
+
+            <Button Text="Calcular Nota" Clicked="OnCalcularClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
